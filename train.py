@@ -31,8 +31,7 @@ class Solver(object):
         self.global_step = tf.get_variable(
             'global_step', [], initializer=tf.constant_initializer(0), trainable=False)
 
-#self.learning_rate = tf.train.exponential_decay(
-#         self.initial_learning_rate, self.global_step, self.decay_steps,
+#self.learning_rate = tf.train.exponential_decay(self.initial_learning_rate, self.global_step, self.decay_steps,
 #           self.decay_rate, self.staircase, name='learning_rate')
 
         self.optimizer = tf.train.AdamOptimizer(
